@@ -224,13 +224,20 @@ images that are both sharp <em>and</em> physically valid.
   <li><b>Optics:</b> Abbe diffraction limit, Point Spread Function, Nyquist sampling in microscopy</li>
 </ul>
 
-<h3 style="margin:16px 0 12px;font-size:16px"> GitHub Repository</h3>
+<h3 style="margin:16px 0 12px;font-size:16px"> Live Demo & GitHub</h3>
 <div style="background:#1a1a2e;color:#e0e0e0;border-left:4px solid #1d9e75;padding:14px 18px;
             border-radius:0 8px 8px 0;font-size:14px;line-height:1.6">
-  <a href='https://github.com/Tharungowdapr/MicroSR-.git' target='_blank' style='color:#4ecdc4;font-weight:bold'>
+  <b style="color:#88d8b0">Live Demo:</b>
+  <a href='https://tharungowadpr-microsr.hf.space' target='_blank' style='color:#4ecdc4'>
+    tharungowadpr-microsr.hf.space
+  </a>
+  <br><span style="color:#aaa">Hosted on Hugging Face Spaces (CPU — ~60s inference)</span>
+  <br><br>
+  <b style="color:#88d8b0">GitHub:</b>
+  <a href='https://github.com/Tharungowdapr/MicroSR-.git' target='_blank' style='color:#4ecdc4'>
     github.com/Tharungowdapr/MicroSR-
   </a>
-  <br><span style="color:#aaa">Full source code, training scripts, and deployment guide.</span>
+  <br><span style="color:#aaa">Full source, training scripts, and deployment guide.</span>
 </div>
 
 </div>
@@ -273,6 +280,7 @@ TECH_DETAILS = """
 <strong>MLOps:</strong> MLflow + DVC |
 <strong>GPU:</strong> NVIDIA RTX 5060 8GB |
 <strong>Training:</strong> 200 epochs, 40 min |
+<strong>Live Demo:</strong> <a href='https://tharungowadpr-microsr.hf.space' target='_blank'>HF Spaces</a> |
 <strong>GitHub:</strong> <a href='https://github.com/Tharungowdapr/MicroSR-.git' target='_blank'>github.com/Tharungowdapr/MicroSR-</a>
 </div>
 """

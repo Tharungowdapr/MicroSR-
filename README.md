@@ -3,7 +3,14 @@
 > A diffusion model that enhances blurry microscope images while ensuring the output obeys real optical physics (PSF consistency constraint).  
 > **B.Tech Final Year Project | 2025–26**
 
----
+[![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-blue)](https://tharungowadpr-microsr.hf.space)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black)](https://github.com/Tharungowdapr/MicroSR-)
+[![Colab](https://img.shields.io/badge/Open%20in-Colab-orange)](https://colab.research.google.com/github/Tharungowdapr/MicroSR-/blob/main/microsr_colab.ipynb)
+
+## 🚀 Live Demo
+
+Try the model instantly: **[tharungowadpr-microsr.hf.space](https://tharungowadpr-microsr.hf.space)**  
+*(Runs on CPU — inference takes ~60s per image)*
 
 ## 🚀 Quick Start
 
@@ -34,6 +41,17 @@ python frontend/app.py --ckpt runs/microsr-gpu-v2/best_model.pt
 | SSIM | **0.43** | 0.04 |
 | PSF Error | **0.041** | 0.44 |
 | FRC | **0.68** | 0.35 |
+
+## 💾 Pretrained Models
+
+Download from the [v1.0 Release](https://github.com/Tharungowdapr/MicroSR-/releases/tag/v1.0):
+
+| File | Size | Description |
+|------|------|-------------|
+| `best_model.pt` | 242 MB | Best checkpoint (PSNR 27.24 dB) |
+| `final_model.pt` | 242 MB | Final checkpoint (200 epochs) |
+
+Place in `runs/microsr-gpu-v2/` after download.
 
 ## 📦 Data
 
@@ -78,9 +96,12 @@ microsr/
 - [BioSR Dataset](https://figshare.com/articles/dataset/BioSR/13264793)
 - [SR3: Image Super-Resolution via Iterative Refinement](https://arxiv.org/abs/2104.07636)
 
-## 🔗 GitHub
+## 🔗 Links
 
-https://github.com/Tharungowdapr/MicroSR-.git
+- **Live Demo:** https://tharungowadpr-microsr.hf.space
+- **GitHub:** https://github.com/Tharungowdapr/MicroSR-.git
+- **Colab:** `microsr_colab.ipynb`
+- **Dataset (BioSR):** https://figshare.com/articles/dataset/BioSR/13264793
 
 ## License
 
