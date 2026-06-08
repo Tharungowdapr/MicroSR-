@@ -1,0 +1,32 @@
+# MicroSR — Default Training Configuration
+# Override any value via CLI: python train.py --epochs 100
+
+# ── Data ──────────────────────────────────────
+data_root:   data/BioSR
+max_train:   2000
+max_val:     200
+patch_size:  64
+upsample:    2
+num_workers: 2
+
+# ── Model ─────────────────────────────────────
+base_ch:     64          # UNet base channels (64→128→256→512)
+T:           1000        # Diffusion timesteps
+psf_sigma:   2.0         # PSF Gaussian sigma in pixels
+
+# ── Training ──────────────────────────────────
+epochs:      200
+batch_size:  4
+lr:          0.0002
+lam:         0.1         # PSF constraint weight (ablation: 0.0 0.01 0.05 0.1 0.5)
+amp:         true        # Mixed precision (recommended for 8GB GPU)
+
+# ── Checkpointing ─────────────────────────────
+run_dir:     runs/exp1
+run_name:    microsr-v1
+save_every:  20          # Save checkpoint every N epochs
+val_every:   10          # Validate every N epochs
+
+# ── MLOps ─────────────────────────────────────
+use_wandb:   true
+use_mlflow:  true
