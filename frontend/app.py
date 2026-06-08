@@ -482,12 +482,6 @@ dvc list .
 > **Note:** Our trained model is at `runs/microsr-gpu-v2/best_model.pt`
                 """)
 
-    app.theme = gr.themes.Soft(primary_hue="emerald", neutral_hue="slate")
-    app.css = """
-        .gr-button-primary { background: #1D9E75 !important; border-color: #1D9E75 !important; }
-        .gr-button-primary:hover { background: #0f6e56 !important; }
-        footer { display: none !important; }
-    """
     return app
 
 
@@ -509,4 +503,9 @@ if __name__ == "__main__":
         show_error      = True,
         favicon_path    = None,
         theme           = gr.themes.Soft(primary_hue="emerald", neutral_hue="slate"),
+        css             = """
+            .gr-button-primary { background: #1D9E75 !important; border-color: #1D9E75 !important; }
+            .gr-button-primary:hover { background: #0f6e56 !important; }
+            footer { display: none !important; }
+        """,
     )
