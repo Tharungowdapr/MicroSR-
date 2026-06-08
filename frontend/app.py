@@ -291,12 +291,6 @@ def build_app(ckpt_path: str = "runs/exp1/best_model.pt") -> gr.Blocks:
 
     with gr.Blocks(
         title = "MicroSR — Physics-Constrained Microscopy Super-Resolution",
-        theme = gr.themes.Soft(primary_hue="emerald", neutral_hue="slate"),
-        css   = """
-            .gr-button-primary { background: #1D9E75 !important; border-color: #1D9E75 !important; }
-            .gr-button-primary:hover { background: #0f6e56 !important; }
-            footer { display: none !important; }
-        """
     ) as app:
 
         # ── Header ──
@@ -439,7 +433,11 @@ microscope would actually produce — not just whether it looks sharp.
 git clone https://github.com/Tharungowdapr/MicroSR-.git
 cd MicroSR-
 
-# 2. Launch the app (loads our trained model)
+# 2. Download pretrained model (~242 MB)
+#    From: https://github.com/Tharungowdapr/MicroSR-/releases/tag/v1.0
+wget -P runs/microsr-gpu-v2/ https://github.com/Tharungowdapr/MicroSR-/releases/download/v1.0/best_model.pt
+
+# 3. Launch the app
 pip install -r requirements.txt
 python frontend/app.py --ckpt runs/microsr-gpu-v2/best_model.pt
 ```
@@ -484,6 +482,12 @@ dvc list .
 > **Note:** Our trained model is at `runs/microsr-gpu-v2/best_model.pt`
                 """)
 
+    app.theme = gr.themes.Soft(primary_hue="emerald", neutral_hue="slate")
+    app.css = """
+        .gr-button-primary { background: #1D9E75 !important; border-color: #1D9E75 !important; }
+        .gr-button-primary:hover { background: #0f6e56 !important; }
+        footer { display: none !important; }
+    """
     return app
 
 
@@ -504,4 +508,5 @@ if __name__ == "__main__":
         share           = args.share,
         show_error      = True,
         favicon_path    = None,
+        theme           = gr.themes.Soft(primary_hue="emerald", neutral_hue="slate"),
     )
